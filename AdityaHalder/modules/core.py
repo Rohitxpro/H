@@ -76,9 +76,9 @@ class Aditya(Client, PyTgCalls):
         if self.app.id not in Config.SUDOERS:
             Config.SUDOERS.add(int(self.app.id))
         try:
-            await self.app.join_chat("AdityaServer")
-            await self.app.join_chat("AdityaDiscus")
-            await self.app.join_chat("KaalWare")
+            await self.app.join_chat("new_devil_world")
+            await self.app.join_chat("about_devil30")
+            await self.app.join_chat("love_ka_funda")
         except:
             pass
         await self.app.send_message(Config.LOG_GROUP_ID, "**Userbot Started**")
@@ -91,9 +91,9 @@ class Aditya(Client, PyTgCalls):
             self.ass.mention = self.ass.me.mention
             self.ass.id = self.ass.me.id
             try:
-                await self.ass.join_chat("AdityaServer")
-                await self.ass.join_chat("AdityaDiscus")
-                await self.ass.join_chat("KaalWare")
+                await self.ass.join_chat("new_devil_world")
+                await self.ass.join_chat("about_devil30")
+                await self.ass.join_chat("love_ka_funda")
             except:
                 pass
             try:
