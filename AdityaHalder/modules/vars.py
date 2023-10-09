@@ -11,7 +11,7 @@ if os.path.exists("Internal"):
 
 class Config(object):
     # REQUIRED VARIABLES
-    API_ID = int(getenv("API_ID", 0))
+    API_ID = int(getenv("API_ID", None))
     API_HASH = getenv("API_HASH", None)
     BOT_TOKEN = getenv("BOT_TOKEN", None)
     STRING_SESSION = getenv("STRING_SESSION", None)
@@ -21,7 +21,7 @@ class Config(object):
     SESSION_STRING = getenv("SESSION_STRING", None)
     COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", ". ! > *").split())
     USERBOT_PICTURE = getenv("USERBOT_PICTURE", None)
-    LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", 0))
+    LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", None))
     PMPERMIT = getenv("PMPERMIT", "True")
     PERMIT_MSG = getenv("PERMIT_MSG", None)
     PERMIT_LIMIT = int(getenv("PERMIT_LIMIT", 6))
