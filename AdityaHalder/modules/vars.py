@@ -12,16 +12,16 @@ if os.path.exists("Internal"):
 class Config(object):
     # REQUIRED VARIABLES
     API_ID = int(getenv("API_ID", 0))
-    API_HASH = getenv("API_HASH","303837af39dfd53ff9b60a56f6ca3bc6")
-    BOT_TOKEN = getenv("BOT_TOKEN","6652949143:AAFmXmYdM484jgo217X8CPxwNHmd4M7zbxk")
-    STRING_SESSION = getenv("STRING_SESSION","BQCpfIoAxv3PTQ6Hpf9uFesBOIjcmDghd6As2qpfqrCTN_Pktvzd5HkrBoc5mQmCP34wRK_P783D9_7FLGMmDaeIICvZ47Vmu_bU43iCwv678sUlmfDUvS8uA_SU3cdr3mO0CvSPB5ZnArSbYjyNeOXiG_yKUXxIuso1BiYT8suXQGcrfhmu8XDiZADY_6YUTbHuchYj6aHfeM0Vq3nLYLNrDzqXVGo-ggvFIGqBtDlmCbtwaxzeluDLL0KpEzFvLaNgibj5pAPSFkXcAaPt6xc-27ZQY1eEYMDod_o477kcvQU_D44PPIPMfYKqm0Qxnpj5sRRlMVU2j32hWbHlsqSFvkb5xAAAAAGEsRkqAA")
-    MONGO_DATABASE = getenv("MONGO_DATABASE","mongodb+srv://devilop:devilop123@devilserver.bhep18a.mongodb.net/?retryWrites=true&w=majority")
+    API_HASH = getenv("API_HASH", None)
+    BOT_TOKEN = getenv("BOT_TOKEN", None)
+    STRING_SESSION = getenv("STRING_SESSION", None)
+    MONGO_DATABASE = getenv("MONGO_DATABASE", None)
   
     # OPTIONAL VARIABLES
     SESSION_STRING = getenv("SESSION_STRING", None)
     COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", ". ! > *").split())
-    USERBOT_PICTURE = getenv("USERBOT_PICTURE","https://graph.org/file/e332ff3f78ea32aaf6685.jpg")
-    LOG_GROUP_ID = int(getenv("LOG_GROUP_ID","-1001919006105"))
+    USERBOT_PICTURE = getenv("USERBOT_PICTURE", None)
+    LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", 0))
     PMPERMIT = getenv("PMPERMIT", "True")
     PERMIT_MSG = getenv("PERMIT_MSG", None)
     PERMIT_LIMIT = int(getenv("PERMIT_LIMIT", 6))
@@ -48,4 +48,3 @@ class Config(object):
 # get all config variables in a list
 all_vars = [i for i in Config.__dict__.keys()]
 all_vals = [i for i in Config.__dict__.values()]
-
